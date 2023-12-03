@@ -173,7 +173,7 @@ print('No tienes suficiente dinero para comprar este producto')
 # 6.Si "encontrado" sigue siendo "False" después de recorrer toda la lista "nombres", mensaje "Nombre no encontrado".
 
 nombres=['Juan', 'Ana', 'Pedro', 'Maria', 'Sofia']
-amado_buscado='Ana'
+amado_buscado='Maria'
 encontrado=False
 indice = 0
 
