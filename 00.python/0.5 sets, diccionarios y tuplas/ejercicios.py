@@ -8,8 +8,8 @@ compras=['leche', 'pan', 'huevos', 'manzanas', 'queso']
 
 # 2.Usando un bucle "for", imprime cada producto de la lista.
 
-for compra in compras:
-    print(compra)
+for producto in compras:
+    print(producto)
 
 # 3.Usando la función "append()", agrega un producto nuevo a la lista (por ejemplo: cereales).
 
@@ -42,6 +42,12 @@ print(longuitud_lista)
 
 # 8.Usando un bucle "for", imprime cada producto de la lista en orden inverso.
 
+
+for compra in compras[::-1]:
+    print(compra)
+
+
+#Otra forma
 for lista_reversed in reversed(compras):
     print(lista_reversed)
 
@@ -58,6 +64,43 @@ for lista_reversed in reversed(compras):
 #   auxiliar llamada "numero_empleados_departamento" inicializada a 0.
 # 7.Usando un bucle anidado, imprime el nombre de cada empleado en cada departamento.
 
+
+
+
+empleados= [['Juan','Arturo','Maria','Arturo'], ['Alberto','Pedro','Ana','Alberto'], ['Andrea','Cristina','Pepe','Alvaro']] #ventas, marketing y tecnología 
+total_empleados_empresa=0
+
+for departamento in empleados:
+    print(departamento)
+    for empleado in departamento:
+        total_empleados_empresa=total_empleados_empresa +1
+        print(f'El número total es de {total_empleados_empresa}')
+
+empleados[1].append('Alberto Pérez')
+print(empleados)
+
+empleados[0].remove('Juan')
+print(empleados)
+
+ultimo_empleado=empleados[1].pop()
+print(f'El último empleado es {ultimo_empleado}')
+
+print(len(empleados))
+
+numero_empleados_departamento=0
+for departamento in empleados:
+#hay que hacer que la variable vuelva a 0 cuando recora cada departamento
+    numero_empleados_departamento=0
+    for empleado in departamento:
+        numero_empleados_departamento=numero_empleados_departamento +1
+    print(f'El número de empleados para el departamento es { numero_empleados_departamento}')
+
+
+for departamento in empleados:
+    for empleado in departamento:
+        print(empleado)
+
+
 ################### EJERCICIO DE SETS #####################
 
 # 1.Crea un set llamado "amigos_invitados" con los nombres de tus amigos a los que has invitado a una fiesta (por ejemplo: Juan, Pedro, Ana, Marta, Carlos).
@@ -68,6 +111,23 @@ for lista_reversed in reversed(compras):
 # 6.Usando la función "discard()" elimina un amigo específico de "amigos_invitados" (por ejemplo: Marta).
 # 7.Usando la función "clear()" vacía el set "amigos_invitados".
 # 8.Usando la función "len()" imprime la cantidad de elementos en "amigos_confirmados".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ################### EJERCICIO DE TUPLAS #####################
 
