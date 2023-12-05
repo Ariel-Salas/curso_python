@@ -116,19 +116,6 @@ for departamento in empleados:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ################### EJERCICIO DE TUPLAS #####################
 
 # 1.Crea una tupla llamada "direccion" con tus datos de dirección (por ejemplo: calle, número, ciudad, código postal, país).
@@ -138,6 +125,16 @@ for departamento in empleados:
 # 5.Usando la función "count()" cuenta cuantas veces aparece la ciudad en la tupla "direccion".
 # 6.Usando la función "len()" imprime la cantidad de elementos en "direccion".
 # 7.Unir dos tuplas creando una tercera con el contenido de ambas.
+
+
+
+
+
+
+
+
+
+
 
 ################### EJERCICIOS DE DICCIONARIOS #####################
 
@@ -151,6 +148,19 @@ for departamento in empleados:
 # 6.Usa el metodo "get()" para buscar un contacto específico "Lucia"
 
 
+agenda={"Juan":  "555-555-5555",
+        "Maria": "444-444-4444",
+        "Pedro": "333-333-3333"
+        }
+
+agenda.update ({"Lucia":"222-222-2222"})
+agenda.pop('Juan')
+print(agenda)
+
+for nombre, telefono  in agenda.items():
+    print(f'El nombre {nombre} tiene el teléfono {telefono} ')
+
+print(agenda.get('Lucia'))
 ################### EJERCICIO 2 #####################
 
 # 1.Crea un diccionario vacío llamado "estudiantes" que almacene información de los estudiantes de una clase.
@@ -160,3 +170,7 @@ for departamento in empleados:
 # 5.Utiliza un ciclo for para calcular el promedio de notas de cada estudiante y añadirlo al diccionario
 # 6.Utiliza el método "get()"" para buscar la asistencia de un estudiante específico "Lucia"
 # 7.Utiliza un ciclo for para contar el número de veces que un estudiante ha faltado a clase y añadirlo al diccionario.
+
+
+
+
