@@ -161,6 +161,8 @@ for nombre, telefono  in agenda.items():
     print(f'El nombre {nombre} tiene el teléfono {telefono} ')
 
 print(agenda.get('Lucia'))
+
+
 ################### EJERCICIO 2 #####################
 
 # 1.Crea un diccionario vacío llamado "estudiantes" que almacene información de los estudiantes de una clase.
@@ -171,6 +173,41 @@ print(agenda.get('Lucia'))
 # 6.Utiliza el método "get()"" para buscar la asistencia de un estudiante específico "Lucia"
 # 7.Utiliza un ciclo for para contar el número de veces que un estudiante ha faltado a clase y añadirlo al diccionario.
 
+estudiantes={"Juan": {"edad":22, "notas": [8, 9, 10, 8], "asistencia": {"Lunes": True, "Martes": True, "Miercoles": False, "Jueves": True, "Viernes": True}}, 
+             "Maria": {"edad":20, "notas": [6, 7, 8, 9], "asistencia": {"Lunes": True, "Martes": False, "Miercoles": True, "Jueves": False, "Viernes": True}}}
+
+estudiantes.update({"Lucia":{"edad":21, "notas": [9, 8, 7, 6], "asistencia": {"Lunes": False, "Martes": True, "Miercoles": True, "Jueves": True, "Viernes": False}}})
+
+print(estudiantes)
+
+estudiantes.pop('Juan')
+print(f'Los estudiantes son:{estudiantes}')
+
+#Ejercicio 5 
+for nombre, informacion in estudiantes.items():
+    notas=informacion['notas']
+    suma_notas=0
+    for nota in notas:
+        suma_notas= suma_notas+nota
+    promedio= suma_notas / len(notas)
+    informacion.update({'promedio notas': promedio})
+
+print(f'La respuesta a la pregunta 5 es: {estudiantes}')
+
+#ejercicio 6
+print( estudiantes['Lucia']['asistencia'] )
+
+
+#ejercicio 7 
+
+for nombre, informacion in estudiantes.items():
+    asistencia=informacion['asistencia']
+    numero_falta_asistencia=0
+    for dia, valor_asistencia in asistencia.items():
+        if valor_asistencia==False:
+            numero_falta_asistencia=numero_falta_asistencia + 1
+    informacion.update({'numero falta asistencia':numero_falta_asistencia})
+print(estudiantes)
 
 
 
