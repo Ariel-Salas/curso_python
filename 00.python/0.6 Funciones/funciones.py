@@ -10,6 +10,7 @@ def fucion_basica()-> None:
 fucion_basica()
 
 
+\
 ############################# FUNCIÓN CON PARÁMETROS #####################################
 
 # Python es un lenguaje con tipado dinámico, es decir, no hace falta indicar que tipo de datos va a recibir o devolver una función ya que Python
@@ -25,8 +26,10 @@ print(resultado)
 
 
 
-
 ############################# FUNCIÓN CON PARÁMETROS CON VALORES POR DEFECTO #####################################
+
+
+
 
 
 def sacar_dinero(saldo_cuenta:int, dinero_retirar=20):

@@ -12,6 +12,7 @@
 # 7.Imprime "Impuesto a pagar: " y el valor de "impuesto_a_pagar".
 
 
+
 def calcular_impuestos(ingresos: int, tasa_impuestos: float)-> float:
     impuesto_debido =ingresos*tasa_impuestos
     return impuesto_debido
@@ -37,16 +38,26 @@ def calcular_promedio(numeros:list)->float:
     numeros_acumulados=0
     for numero in numeros:
         numeros_acumulados=numeros_acumulados+numero
-        promedio=numeros_acumulados/len(numeros)
+        promedio=(numeros_acumulados/len(numeros))
     return(promedio)
     
 
-    
 calificaciones=[9, 8, 10, 7, 8, 9, 6, 8, 10, 9]
 promedio_curso=calcular_promedio(calificaciones)
 
 print(f'El promedio de las notas de tu curso es {promedio_curso} ')
 
+
+def calculate_average(numeros:list)->float:
+    sum_number=0
+    for numero in numeros:
+        sum_number=sum_number+numero
+        average= sum_number/len(numeros)
+    return average
+
+calification=[7,7,7]
+average_total=calculate_average(calification)
+print(f'My note in the interview in ESO will be {average_total}')
 
 
 ################### EJERCICIO 3 #####################
@@ -99,6 +110,9 @@ yenes = convertir_moneda(dolares,'yenes')
 print(yenes)
 
 
+
+
+
 ################### EJERCICIO 5 #####################
 
 # 1.Crea una función llamada "aplicar_descuento" para comprar un producto en distintas divisas y con posibles descuentos,
@@ -130,3 +144,99 @@ precio_final = aplicar_descuento('zapatos','euros',zapatos={"precio": 12.99, "de
     gafas={"precio": 29.99, "descuento": 0.25})
 
 print(f'El precio final es de {precio_final}')
+
+
+################### EJERCICIO 6 #####################
+
+# Definir una función con nombre numero_max() que tome como argumento 
+# dos números inroducidos por el usuario y devuelva el mayor de ellos, 
+
+
+numero_uno = float(input('Escribe el primer número por favor'))
+numero_dos = float(input('Escribe el segundo numero por favor'))
+
+def numero_max(numero_uno,numero_dos)->float:
+    if numero_uno > numero_dos:
+        return numero_uno
+    else:
+        return numero_dos
+    
+resultado=numero_max(numero_uno,numero_dos)
+print(f'El numero máximo introducido por usted es{resultado}')
+
+
+################### EJERCICIO 7 #####################
+
+# Definir una función max_tres(), que tome tres números 
+# como argumentos y devuelva el mayor de ellos.
+
+
+primer_numero=float(input('Escriba el primer número'))
+segundo_numero=float(input('Escriba el segundo número'))
+tercer_numero=float(input('Escriba el tercer número'))
+
+def max_tres(num1,num2,num3)->float:
+    if num1 >= num2 and num1 >= num3:
+        return num1
+    elif num2 >= num1 and num2 >= num3:
+        return num2
+    else:
+        return num3
+    
+numero_maximo=max_tres(primer_numero,segundo_numero,tercer_numero)
+print(f'El número con el valor máximo escrito por tí es {numero_maximo}')
+
+
+################### EJERCICIO 8 #####################
+
+
+# Escribir una funcion que tome un carácter y devuelva 
+# True si es una vocal, de lo contrario devuelve Flase
+
+caracter=(input('Escriba una letra '))
+
+
+def vocal(caracter):
+    lista_vocales=['a','e','i','o','u']
+    if caracter in lista_vocales:
+        return True
+    else:
+        return False
+
+resultado_letra= vocal(caracter)
+print(f'Tu letra escrita es una vocal? {resultado_letra}') 
+
+
+################### EJERCICIO 9 #####################
+
+# Escribir una función sum() y una función multip() que sumen y multipliquen respectivamente todos los numeros de una lista. 
+# Por ejemplo: sum ([1,2,3,4,5]) debería devolver 10 y multiplicar ({1,2,3,4}) deberia devolver 24
+
+# Solicitar al usuario ingresar la lista=
+entrada_usuario = input("Ingresa una lista de números separados por espacios: ")
+
+# Convertir la entrada del usuario a una lista de números
+lista_numeros = [float(numero) for numero in entrada_usuario.split()]
+
+
+def sumar(lista):
+    suma=0
+    for numero in lista:
+        suma+=numero
+    return suma 
+
+
+
+def multiplicar(lista):
+    resultado=1
+    for numero in lista:
+        resultado*= numero
+    return resultado
+
+
+
+resultado_suma = sumar(lista_numeros)
+resultado_multiplicacion = multiplicar(lista_numeros)
+
+print(f'La suma de la lista es: {resultado_suma}')
+print(f'La multiplicación de la lista es: {resultado_multiplicacion}')
