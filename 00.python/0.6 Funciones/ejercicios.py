@@ -57,7 +57,7 @@ def calculate_average(numeros:list)->float:
 
 calification=[7,7,7]
 average_total=calculate_average(calification)
-print(f'My note in the interview in ESO will be {average_total}')
+print(f'My note in the interview will be {average_total}')
 
 
 ################### EJERCICIO 3 #####################
@@ -74,18 +74,28 @@ print(f'My note in the interview in ESO will be {average_total}')
 # 8.Imprime "El costo de envio desde " + origen + " hasta " + destino + " es de: " + costo_envio
 
 
+def calcular_costo_envio2(origen:str, destino:str)-> int:
+    informacion_costo={"Nueva York": {"Los Ángeles": 20, "Chicago": 10, "Miami":15}, "Los Ángeles": {"Nueva York": 25, "Chicago": 17, "Miami": 20}}
+    informacion_destino=informacion_costo.get(origen,{})
+    costo_destino=informacion_destino.get(destino,f'Lo siento no hay ruta posible')
+    return costo_destino
 
-def calcular_costo_envio(origen: str, destino:str) -> int:
-    informacion_costos = {"Nueva York": {"Los Ángeles": 20, "Chicago": 10, "Miami": 15}, "Los Ángeles": {"Nueva York": 25, "Chicago": 17, "Miami": 20}}
-    informacion_destinos = informacion_costos[origen]
-    coste_destino = informacion_destinos.get(destino,f"Desde {origen} hasta {destino} no hay ruta posible de envio.")
-    return coste_destino
-        
-origen= 'Nueva York'
-destino = 'Los Ángeles'
+origen='Auckland'
+destino='los angeles'
 
-costo_envio = calcular_costo_envio(origen, destino)
-print(f"El costo de envio desde {origen} hasta {destino} es de: {costo_envio}")
+costo_envio=calcular_costo_envio2(origen,destino)
+print(f'el costo de envio desde {origen } a {destino} es de: {costo_envio}')
+
+
+
+
+
+
+
+
+
+
+
 
 
 ################### EJERCICIO 4 #####################
@@ -231,7 +241,7 @@ def multiplicar(lista):
     resultado=1
     for numero in lista:
         resultado*= numero
-    return resultado
+    return resultado    
 
 
 

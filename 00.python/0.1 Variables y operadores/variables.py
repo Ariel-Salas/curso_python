@@ -1,12 +1,11 @@
 ### comentario en python####
 suma= 1+1
-#print(suma)#
+print(suma)
 
 divisionDecimal= 18/5
 print(divisionDecimal)
 division_sin_decimal= 18//5
 print(division_sin_decimal)
-
 
 modulo= 3%4
 print(modulo);
@@ -45,3 +44,11 @@ y=x;
 
 is_operador= x is not y 
 print(is_operador);
+
+
+x=1
+y=x
+
+
+is_ejemplo= x is not y 
+print(is_ejemplo)
