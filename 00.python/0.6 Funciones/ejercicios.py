@@ -44,20 +44,8 @@ def calcular_promedio(numeros:list)->float:
 
 calificaciones=[9, 8, 10, 7, 8, 9, 6, 8, 10, 9]
 promedio_curso=calcular_promedio(calificaciones)
-
 print(f'El promedio de las notas de tu curso es {promedio_curso} ')
 
-
-def calculate_average(numeros:list)->float:
-    sum_number=0
-    for numero in numeros:
-        sum_number=sum_number+numero
-        average= sum_number/len(numeros)
-    return average
-
-calification=[7,7,7]
-average_total=calculate_average(calification)
-print(f'My note in the interview will be {average_total}')
 
 
 ################### EJERCICIO 3 #####################
@@ -74,7 +62,7 @@ print(f'My note in the interview will be {average_total}')
 # 8.Imprime "El costo de envio desde " + origen + " hasta " + destino + " es de: " + costo_envio
 
 
-def calcular_costo_envio2(origen:str, destino:str)-> int:
+def calcular_costo_envio(origen:str, destino:str)-> int:
     informacion_costo={"Nueva York": {"Los Ángeles": 20, "Chicago": 10, "Miami":15}, "Los Ángeles": {"Nueva York": 25, "Chicago": 17, "Miami": 20}}
     informacion_destino=informacion_costo.get(origen,{})
     costo_destino=informacion_destino.get(destino,f'Lo siento no hay ruta posible')
@@ -83,18 +71,22 @@ def calcular_costo_envio2(origen:str, destino:str)-> int:
 origen='Auckland'
 destino='los angeles'
 
-costo_envio=calcular_costo_envio2(origen,destino)
+costo_envio=calcular_costo_envio(origen,destino)
 print(f'el costo de envio desde {origen } a {destino} es de: {costo_envio}')
 
 
 
+def calcular_envio2(origen, destino)->float:
+    informacion_costo={'nueva york':{'los angeles':50}, 'los angeles':{'nueva york':40}}
+    informacion_destino=informacion_costo.get(origen,{})
+    costo_destino=informacion_destino.get(destino, f'Lo siento tu ruta no esta disponible por el momento')
+    return costo_destino
 
+origen='nueva york'
+destino='los angeles'
 
-
-
-
-
-
+costo_envio=calcular_envio2(origen,destino)
+print(f'El costo de tu envio es de {costo_envio}')
 
 
 
@@ -118,9 +110,6 @@ def convertir_moneda(cantidad_dolares, moneda_destino='euros')->float:
 dolares = 1000
 yenes = convertir_moneda(dolares,'yenes')
 print(yenes)
-
-
-
 
 
 ################### EJERCICIO 5 #####################
@@ -250,3 +239,11 @@ resultado_multiplicacion = multiplicar(lista_numeros)
 
 print(f'La suma de la lista es: {resultado_suma}')
 print(f'La multiplicación de la lista es: {resultado_multiplicacion}')
+
+
+#Función para saber si un numero es impar o no
+
+
+
+
+
