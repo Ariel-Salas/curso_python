@@ -74,7 +74,7 @@ for departamento in empleados:
     print(departamento)
     for empleado in departamento:
         total_empleados_empresa=total_empleados_empresa +1
-        print(f'El número total es de {total_empleados_empresa}')
+print(f'El número total es de {total_empleados_empresa}')
 
 empleados[1].append('Alberto Pérez')
 print(empleados)
@@ -112,7 +112,17 @@ for departamento in empleados:
 # 7.Usando la función "clear()" vacía el set "amigos_invitados".
 # 8.Usando la función "len()" imprime la cantidad de elementos en "amigos_confirmados".
 
+amigos_invitados = {'Juan', 'Pedro', 'Ana', 'Marta', 'Carlos'}
+amigos_confirmados = {'Juan', 'Pedro', 'Ana'}
 
+amigos_confirmados.add('Luis')
+
+amigos_sin_confirmar = amigos_invitados.difference(amigos_confirmados)
+amigos_confirmados = amigos_invitados.intersection(amigos_confirmados)
+amigos_invitados.discard('Marta')
+amigos_invitados.clear()
+
+print(len(amigos_confirmados))
 
 
 
@@ -126,13 +136,21 @@ for departamento in empleados:
 # 6.Usando la función "len()" imprime la cantidad de elementos en "direccion".
 # 7.Unir dos tuplas creando una tercera con el contenido de ambas.
 
+direccion = ('Calle Rosario', 10, 'Santiago', 20919, 'Chile')
 
+print(direccion.index('Santiago'))
+print(direccion[-2:])
 
+nueva_direccion = list(direccion)
+nueva_direccion[1] = 15
+nueva_direccion = tuple(nueva_direccion)
 
+print(direccion.count('Santiago'))
+print(len(direccion))
 
+union_direcciones = direccion + nueva_direccion
 
-
-
+print(union_direcciones)
 
 
 
